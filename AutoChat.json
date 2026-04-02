@@ -1,0 +1,169 @@
+{
+  "name": "AI Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "f3056e50-d146-4fec-9e8b-7ad8d3d77256",
+      "name": "When chat message received",
+      "webhookId": "92e22c1d-1567-4a7f-ad68-ba2e11980405"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are an AI assistant for Bitspark Technologies.\n\nYour role is to help users by answering questions about Bitspark Technologies.\n\nFollow these rules strictly:\n\n1. Only answer questions related to Bitspark Technologies, including services, products, internships, training, technologies, contact details, and company information.\n\n2. Use ONLY the information provided in the knowledge data.\n\n3. Do NOT add, assume, or generate any information that is not present in the data.\n\n4. If the requested information is not available, respond exactly with:\n   \"I'm sorry, I don't have that information available right now.\"\n\n5. If the question is unrelated to Bitspark Technologies, respond exactly with:\n   \"I'm sorry, I can only answer questions related to Bitspark Technologies.\"\n\n6. If asked about your data source, respond exactly with:\n   \"I provide information about Bitspark Technologies to assist visitors.\"\n\n7. Do NOT mention any data source, database, or internal system.\n\n8. Respond politely to greetings like \"Hi\", \"Hello\", or \"Hey\".\n\nGreeting response:\n\"Hello! Welcome to Bitspark Technologies. How can I help you today?\"\n\n9. Keep responses short, clear, and professional.\n\n10. Do not repeat the question. Do not give long explanations.\n\n11. Prefer bullet points when listing information.\n",
+          "batching": {
+            "delayBetweenBatches": 2
+          }
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        288,
+        0
+      ],
+      "id": "ffda0757-a04f-4522-898e-ea6b3bb53594",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        224,
+        224
+      ],
+      "id": "e57410cf-e937-49b9-8624-398cfcc0f3ac",
+      "name": "Google Gemini Chat Model",
+      "retryOnFail": false,
+      "executeOnce": false,
+      "credentials": {
+        "googlePalmApi": {
+          "id": "yBnzbt7RGZSdsWat",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "session"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        352,
+        224
+      ],
+      "id": "eaade3d2-0e14-4d9f-b17a-cc320431b963",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1vGZsVKVP-6Ff9mpV0KBwv5jdtCyiGlwu6bpVLuGCWMw",
+          "mode": "list",
+          "cachedResultName": "website_data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1vGZsVKVP-6Ff9mpV0KBwv5jdtCyiGlwu6bpVLuGCWMw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        480,
+        224
+      ],
+      "id": "92a8dd98-1af5-4e0f-a9fc-addcfbabd639",
+      "name": "Get row(s) in sheet in Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "enGXAPtWh0V04tu3",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet in Google Sheets": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "0f9d5a8b-0b94-48c1-9e89-39581a0a57fd",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2bd1d66a02e6f63384da26fff292c35a99c78d6434c28d822b71af13215de627"
+  },
+  "id": "q2e3i5BXoC4Up2SU",
+  "tags": []
+}
