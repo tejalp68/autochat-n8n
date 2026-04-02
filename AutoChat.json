@@ -4,7 +4,6 @@
     {
       "parameters": {
         "public": true,
-        "mode": "webhook",
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
@@ -160,7 +159,7 @@
     "binaryMode": "separate",
     "availableInMCP": false
   },
-  "versionId": "3d53cc07-644e-4280-abb5-2460b72fe2b5",
+  "versionId": "0f9d5a8b-0b94-48c1-9e89-39581a0a57fd",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "2bd1d66a02e6f63384da26fff292c35a99c78d6434c28d822b71af13215de627"
