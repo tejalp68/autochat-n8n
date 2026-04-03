@@ -14,6 +14,12 @@ This project is an automated chatbot system designed to:
 * Provide accurate, controlled responses using AI
 
 ---
+## 💬 Access the Chatbot
+
+Click the link below to access and start using the AutoChat Bot:
+
+👉
+---
 
 ## 🧠 Tech Stack
 
@@ -97,6 +103,9 @@ AutoChat-n8n/
 
 ## 📸 Screenshots
 
+## 📸 Workflow Preview
+
+<img src="workflow_Images/Workflow.png" width="700" alt="AutoChat n8n Workflow"/>
 
 
 ---
