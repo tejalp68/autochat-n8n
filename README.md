@@ -105,7 +105,7 @@ AutoChat-n8n/
 
 ## 📸 Workflow Preview
 
-<img src="workflow_Images/Workflow.png" width="700" alt="AutoChat n8n Workflow"/>
+<img src="Workflow_Images/Workflow.png" width="700" alt="AutoChat n8n Workflow"/>
 
 
 ---
