@@ -89,15 +89,15 @@ AutoChat-n8n/
 │
 ├── workflow.json        # Exported n8n workflow
 ├── README.md           # Project documentation
-├── /
-│   └── screenshots.png # Workflow screenshots
+├── Workflow_Images/
+│   └── Workflow.png # Workflow screenshots
 ```
 
 ---
 
 ## 📸 Screenshots
 
-*Add your workflow screenshots here (recommended for better understanding)*
+
 
 ---
 
