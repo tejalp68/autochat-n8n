@@ -110,6 +110,11 @@ AutoChat-n8n/
 
 <img src="Workflow_Images/Workflow.png" width="700" alt="AutoChat n8n Workflow"/>
 
+## 📸 Chat Images
+
+<img src="Workflow_Images/Chat_Images/Chat_Image_1" width="700" alt="AutoChat n8n Workflow"/>
+
+<img src="Workflow_Images/Chat_Images/Chat_Image_2" width="700" alt="AutoChat n8n Workflow"/>
 
 ---
 
