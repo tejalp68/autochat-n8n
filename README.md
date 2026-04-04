@@ -18,7 +18,8 @@ This project is an automated chatbot system designed to:
 
 Click the link below to access and start using the AutoChat Bot:
 
-👉 [Open Chatbot] http://localhost:5678/webhook/92e22c1d-1567-4a7f-ad68-ba2e11980405/chat
+👉 [Open Chatbot] (http://localhost:5678/webhook/92e22c1d-1567-4a7f-ad68-ba2e11980405/chat)
+
 ---
 
 ## 🧠 Tech Stack
