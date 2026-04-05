@@ -44,6 +44,7 @@ Tool Layer
    └── Memory (Last 5 Messages)
    ↓
 Final Response to User
+
 ```
 
 ---
@@ -101,6 +102,7 @@ AutoChat-n8n/
 |   ├── Chat_Images/
 |       ├── Chat_Image_1
 |       ├── Chat_Image_1
+
 ```
 
 ---
@@ -113,9 +115,9 @@ AutoChat-n8n/
 
 ## 📸 Chat Images
 
-<img src="Workflow_Images/Chat_Images/Chat_image_1.png" width="700" alt="AutoChat n8n Workflow"/>
-
 <img src="Workflow_Images/Chat_Images/Chat_image_2.png" width="700" alt="AutoChat n8n Workflow"/>
+
+<img src="Workflow_Images/Chat_Images/Chat_image_1.png" width="700" alt="AutoChat n8n Workflow"/>
 
 ---
 
