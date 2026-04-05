@@ -214,9 +214,15 @@ AutoChat-n8n/
 
 ---
 
-## 👨‍💻 Author
+## 👩‍💻 Author
 
-Developed as part of an AI automation project using n8n.
+**Tejal Pagar**    
+AI/ML Enthusiast | Data Science Learner   
+📍 India
+
+---
+
+⭐ If you find this repository helpful, feel free to star it!
 
 ---
 
